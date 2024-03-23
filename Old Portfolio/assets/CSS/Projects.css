@@ -1,0 +1,202 @@
+.NavBar.sticky {
+  border-bottom: 0.1px solid rgb(113, 112, 112);
+}
+
+.new-project-container {
+  height: 195rem;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.new-project-content {
+  /* display: flex; */
+  width: 72rem;
+  display: grid;
+  grid-template-rows: repeat(1, 0.1fr);
+  grid-template-columns: repeat(3, 0.5fr);
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 2rem;
+}
+
+#btn {
+  width: 15rem;
+  height: 3rem;
+}
+
+@media (max-width: 1280px) {
+  .Projects .new-project-container {
+    height: 185rem;
+  }
+
+  .Projects .new-project-container .new-project-content {
+    width: 68rem;
+    grid-template-rows: repeat(1, 0.1fr);
+    grid-template-columns: repeat(3, 0.3fr);
+    grid-column-gap: 1rem;
+    grid-row-gap: 1.5rem;
+  }
+
+  .Projects .new-project-container .new-project-content .card {
+    width: 22rem;
+    height: 32.5rem;
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+    flex-shrink: 0;
+  }
+
+  .new-project-content .card .content #btn {
+    margin-top: 1.5rem;
+    height: 2.7rem;
+    margin-left: 1.5rem;
+  }
+
+  #btn {
+    margin-top: 3rem;
+  }
+
+  .Ending .page-4 {
+    width: 78.6rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .Projects .new-project-container {
+    height: 245rem;
+  }
+
+  .Projects .new-project-container .new-project-content {
+    width: 49rem;
+    grid-template-rows: repeat(2, 0.1fr);
+    grid-template-columns: repeat(2, 0.3fr);
+  }
+
+  .Projects .new-project-container .new-project-content .card {
+    width: 24rem;
+    height: 31.5rem;
+  }
+
+  .Contact {
+    height: 44rem;
+  }
+
+  .Ending .page-4 {
+    width: 63.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .Projects .new-project-container {
+    height: 232rem;
+    flex-wrap: nowrap;
+  }
+
+  .Projects .new-project-container .new-project-content {
+    width: 38rem;
+    grid-template-rows: repeat(2, 0.1fr);
+    grid-template-columns: repeat(2, 0.3fr);
+  }
+
+  .Projects .new-project-container .new-project-content .card {
+    width: 18.5rem;
+    height: 30rem;
+  }
+
+  .new-project-content .card .content #btn {
+    height: 2.5rem;
+    width: 13rem;
+    margin-top: 1.1rem;
+    margin-left: 0.2rem;
+  }
+
+  .Contact {
+    height: 50rem;
+  }
+
+  .Ending .page-4 {
+    width: 46.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .Projects .new-project-container {
+    height: 218rem;
+  }
+
+  .Projects .new-project-container .new-project-content {
+    width: 34rem;
+  }
+
+  .Projects .new-project-container .new-project-content .card {
+    width: 16.5rem;
+    height: 28rem;
+  }
+
+  .new-project-content .card .content #btn {
+    height: 2.2rem;
+    width: 12rem;
+    margin-top: 1.6rem;
+    margin-left: 0.1rem;
+  }
+
+  .Contact {
+    height: 75rem;
+  }
+
+  .page-4 {
+    width: 38.5rem;
+    height: 60rem;
+    flex-direction: column;
+    border-radius: 8rem;
+  }
+
+  .Ending .page-4 {
+    width: 39.6rem;
+    height: 50rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .Projects {
+    height: 400rem;
+  }
+
+  .Projects .new-project-container {
+    height: 390rem;
+    flex-wrap: nowrap;
+  }
+
+  .Projects .new-project-container .new-project-content {
+    width: 20rem;
+    height: 380rem;
+    grid-template-rows: repeat(3, 0.1fr);
+    grid-template-columns: repeat(1, 0);
+  }
+
+  .Projects .new-project-container .new-project-content .card {
+    width: 21rem;
+    height: 27.5rem;
+  }
+
+  .new-project-content .card .content #btn {
+    margin-top: 1.5rem;
+    margin-left: 2rem;
+  }
+
+  .Projects .new-project-container #btn {
+    margin-top: 2rem;
+    width: 12.5rem;
+  }
+
+  .page-4 {
+    width: 25.5rem;
+    border-radius: 4rem;
+  }
+
+  .Ending .page-4 {
+    width: 26rem;
+    height: 46rem;
+  }
+}

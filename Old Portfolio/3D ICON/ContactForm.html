@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raj Porfolio</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css"
+        integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&family=Open+Sans:wght@700&family=Poppins:ital,wght@0,100;0,400;0,500;0,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('vHqU5ic2pNPhvVJ4z');
+        })();
+    </script> -->
+</head>
+
+<body>
+    <section class="wrapper">
+        <!-- Header Section Start -->
+        <header class="NavBar">
+            <!-- Logo start -->
+            <div class="Logo">
+                <a href="#home">
+                    <div id="logo-img">
+                        <svg id="svg" xmlns="http://www.w3.org/2000/svg" width="85" height="100" viewBox="0 0 120 119"
+                            fill="none">
+                            <path
+                                d="M118.5 58.4049C118.5 89.8661 92.2755 117.5 60 117.5C27.7245 117.5 1.5 89.8661 1.5 58.4049C1.5 27.015 27.653 1.5 60 1.5C92.347 1.5 118.5 27.015 118.5 58.4049Z"
+                                stroke="url(#paint0_linear_9_26)" stroke-width="3" />
+                            <defs>
+                                <linearGradient id="paint0_linear_9_26" x1="60" y1="0" x2="60" y2="119"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#1D33FA" stop-opacity="0.99" />
+                                    <stop offset="1" stop-color="#C324EB" stop-opacity="0.74" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <img src="/Images/Logo 2.png" loading="lazy" alt="logo">
+                    </div>
+                    <p>Raj Yadav</p>
+                </a>
+            </div>
+            <!-- Logo End -->
+
+            <!-- menu icon -->
+            <i class='bx bx-menu' id="menu-ico"></i>
+            <!-- Nav Start -->
+            <div class="navbar-items" id="navactive">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#education">Education</a>
+                <a href="#skill">Skills</a>
+                <a href="#project">Projects</a>
+                <a href="#contact">Contact</a>
+                <div class="bx bx-moon" id="darkMode"></div>
+            </div>
+            <!-- Nav End -->
+        </header>
+        <!-- Header Section End -->
+
+        <!-- Contact section start -->
+        <section class="Contact" id="contact">
+            <h2 id="h2-heading">Get In Touch</h2>
+            <h1 id="h1-heading">Contact Me</h1>
+            <div class="page-4">
+                <div class="contact-left">
+                    <span>
+                        <img src="/Images/3d-Contact-image.png" loading="lazy" alt="contact-img">
+                    </span>
+                    <div class="skill-1 coding">
+                        <img src="/3D ICON/web-development.png" loading="lazy" alt="img">
+                    </div>
+                    <div class="skill-1 language">
+                        <img src="/3D ICON/language.png" loading="lazy" alt="img">
+                    </div>
+                </div>
+                <div class="contact-right">
+
+                    <form id="contactForm">
+                        <div class="input-Box">
+                            <div class="input-message failed-msg">
+                                <!-- full name -->
+                                <input type="text" name="full_Name" id="full_Name" onkeyup="validateName()"
+                                    placeholder="Fullname....">
+                                <!-- Error Message -->
+                                <div class="error-txt" id="fullName-Error"></div> <!-- Name can't blank-->
+                            </div>
+
+                            <div class="input-message failed-msg">
+                                <input type="text" name="email" id="email" placeholder="Email id...."
+                                    onkeyup="validateEmail()">
+                                <!-- Error Message -->
+                                <div class="error-txt" id="email-Error"></div> <!-- Email Address can't blank-->
+                            </div>
+                        </div>
+
+                        <div class="input-Box">
+                            <div class="input-message failed-msg">
+                                <input type="tel" name="phoneNo" id="phoneNo" minlength="0" maxlength="10"
+                                    placeholder="Mobile no...." onkeyup="validatePhoneNo()">
+                                <!-- Error Message -->
+                                <div class="error-txt" id="phoneNo-Error"></div> <!--Mobile No. can't blank-->
+                            </div>
+
+                            <div class="input-message failed-msg">
+                                <input type="text" name="subject" id="subject" placeholder="Email Subject...."
+                                    onkeyup="validateSubject()">
+
+                                <!-- Error Message -->
+                                <div class="error-txt" id="subject-Error"></div>
+                                <!-- Email Subject can't blank-->
+                            </div>
+                        </div>
+
+                        <div class="textarea-field failed-msg">
+                            <textarea placeholder="Message....." name="message" cols="30" rows="7" id="message"
+                                onkeyup="validateMessage()"></textarea>
+                            <!-- Error Message -->
+                            <div class="error-txt" id="message-Error"></div><!-- Message can't blank-->
+                        </div>
+
+                        <div class="button-field failed-msg">
+                            <!-- button -->
+                            <button type="submit" id="btn" onclick="return validateForm()">Submit <a href="#"
+                                    rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="40"
+                                        height="30" viewBox="0 0 25 25" fill="none">
+                                        <path
+                                            d="M6.83333 14.625V10.375H12.5V6.94666L18.0533 12.5L12.5 18.0533V14.625H6.83333Z"
+                                            fill="black" />
+                                        <path
+                                            d="M3.125 19.7917V5.20833C3.125 4.6558 3.34449 4.12589 3.73519 3.73519C4.12589 3.34449 4.6558 3.125 5.20833 3.125H19.7917C20.3442 3.125 20.8741 3.34449 21.2648 3.73519C21.6555 4.12589 21.875 4.6558 21.875 5.20833V19.7917C21.875 20.3442 21.6555 20.8741 21.2648 21.2648C20.8741 21.6555 20.3442 21.875 19.7917 21.875H5.20833C4.6558 21.875 4.12589 21.6555 3.73519 21.2648C3.34449 20.8741 3.125 20.3442 3.125 19.7917ZM17.7083 12.5L12.5 7.29167V10.4167H8.33333V14.5833H12.5V17.7083L17.7083 12.5Z"
+                                            fill="#FFD233" />
+                                    </svg> </a></button>
+                            <!--onclick=" validateForm()"-->
+                            <!-- Error Message -->
+                            <div class="error-txt" id="submit-Error"></div> <!-- Please fix the error--->
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ending Section start  -->
+        <section class="Ending">
+            <div class="page-4">
+                <div class="ending-container">
+
+                    <div class="Name-info Box">
+                        <h2 id="h2-heading">Raj Yadav</h2>
+                        <p>Thank you for visiting my personal portfolio website. Connect with me over socials.</p>
+                        <p>Keep Rising 🚀.</p>
+                    </div>
+
+                    <div class="direct-links Box">
+                        <h2 id="h2-heading">Direct Links</h2>
+                        <a href="#home">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="27" viewBox="0 0 26 27"
+                                fill="none">
+                                <path
+                                    d="M0.745758 26.0376V9.22119L12.9068 0.812988L25.0678 9.22119V26.0376H15.947V16.228H9.86652V26.0376H0.745758Z"
+                                    fill="white" />
+                            </svg>
+                            Home</a>
+                        <a href="#about">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26"
+                                fill="none">
+                                <path
+                                    d="M13.0932 0.289062C14.7059 0.289063 16.2525 0.953458 17.3928 2.13609C18.5331 3.31872 19.1737 4.92272 19.1737 6.59521C19.1737 8.26771 18.5331 9.87171 17.3928 11.0543C16.2525 12.237 14.7059 12.9014 13.0932 12.9014C11.4806 12.9014 9.93395 12.237 8.79364 11.0543C7.65332 9.87171 7.0127 8.26771 7.0127 6.59521C7.0127 4.92272 7.65332 3.31872 8.79364 2.13609C9.93395 0.953458 11.4806 0.289063 13.0932 0.289062ZM13.0932 16.0544C19.8122 16.0544 25.2542 18.8764 25.2542 22.3606V25.5137H0.93219V22.3606C0.93219 18.8764 6.37425 16.0544 13.0932 16.0544Z"
+                                    fill="white" />
+                            </svg>
+                            About</a>
+                        <a href="#education">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26"
+                                fill="none">
+                                <path
+                                    d="M13.0932 0.463379L0.93219 8.87158L5.35438 11.9266V20.3348L13.0932 25.688L20.832 20.3348V11.9266L23.0431 10.3991V20.0825H25.2542V8.87158L13.0932 0.463379ZM20.633 8.87158L13.0932 14.0847L5.55338 8.87158L13.0932 3.6585L20.633 8.87158ZM18.6209 18.6812L13.0932 22.4929L7.56547 18.6812V13.4541L13.0932 17.2798L18.6209 13.4541V18.6812Z"
+                                    fill="white" />
+                            </svg>
+                            Education</a>
+                        <a href="#skill">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"
+                                fill="none">
+                                <path
+                                    d="M12.9214 12.1719L11.2622 13.8311L12.1719 14.7344L14.7344 12.1719L12.1719 9.60938L11.2622 10.5127L12.9214 12.1719ZM7.57859 12.1719L9.23781 10.5127L8.32812 9.60938L5.76562 12.1719L8.32812 14.7344L9.23781 13.8311L7.57859 12.1719Z"
+                                    fill="white" />
+                                <path
+                                    d="M5.76562 5.76562C6.11943 5.76562 6.40625 5.47881 6.40625 5.125C6.40625 4.77119 6.11943 4.48438 5.76562 4.48438C5.41182 4.48438 5.125 4.77119 5.125 5.125C5.125 5.47881 5.41182 5.76562 5.76562 5.76562Z"
+                                    fill="white" />
+                                <path
+                                    d="M3.84375 5.76562C4.19756 5.76562 4.48438 5.47881 4.48438 5.125C4.48438 4.77119 4.19756 4.48438 3.84375 4.48438C3.48994 4.48438 3.20312 4.77119 3.20312 5.125C3.20312 5.47881 3.48994 5.76562 3.84375 5.76562Z"
+                                    fill="white" />
+                                <path
+                                    d="M17.9375 2.5625H2.5625C1.85589 2.5625 1.28125 3.13714 1.28125 3.84375V16.6562C1.28125 17.3629 1.85589 17.9375 2.5625 17.9375H17.9375C18.6441 17.9375 19.2188 17.3629 19.2188 16.6562V3.84375C19.2188 3.13714 18.6441 2.5625 17.9375 2.5625ZM17.9375 3.84375V6.40625H2.5625V3.84375H17.9375ZM2.5625 16.6562V7.6875H17.9375V16.6562H2.5625Z"
+                                    fill="white" />
+                            </svg>
+                            Skills</a>
+                        <a href="#project">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"
+                                fill="none">
+                                <path
+                                    d="M10.25 5.97933C10.7218 5.97933 11.1042 5.59691 11.1042 5.12516C11.1042 4.65342 10.7218 4.271 10.25 4.271C9.77827 4.271 9.39584 4.65342 9.39584 5.12516C9.39584 5.59691 9.77827 5.97933 10.25 5.97933Z"
+                                    fill="white" />
+                                <path
+                                    d="M5.125 14.521H15.375V16.2293H5.125V14.521ZM8.54167 10.105L10.9265 12.4915L14.2851 9.13035L15.375 10.2502V6.8335H11.9583L13.0773 7.92256L10.9256 10.0742L8.54167 7.68766L5.125 11.1043L6.33279 12.3121L8.54167 10.105Z"
+                                    fill="white" />
+                                <path
+                                    d="M16.2292 2.56226H13.4121C13.3283 2.43596 13.237 2.31474 13.1388 2.19924L13.1303 2.18899C12.5027 1.45803 11.6197 0.99425 10.6617 0.892361C10.3897 0.840567 10.1103 0.840567 9.8383 0.892361C8.8803 0.99425 7.99734 1.45803 7.36976 2.18899L7.36122 2.19924C7.26305 2.31447 7.17178 2.4354 7.08789 2.5614L4.27084 2.56226C3.59143 2.56294 2.94005 2.83313 2.45963 3.31355C1.97922 3.79396 1.70902 4.44535 1.70834 5.12476V17.0831C1.70902 17.7625 1.97922 18.4139 2.45963 18.8943C2.94005 19.3747 3.59143 19.6449 4.27084 19.6456H16.2292C16.9086 19.6449 17.56 19.3747 18.0404 18.8943C18.5208 18.4139 18.791 17.7625 18.7917 17.0831V5.12476C18.791 4.44535 18.5208 3.79396 18.0404 3.31355C17.56 2.83313 16.9086 2.56294 16.2292 2.56226ZM17.0833 17.0831C17.0833 17.3096 16.9934 17.5269 16.8332 17.6871C16.673 17.8473 16.4557 17.9373 16.2292 17.9373H4.27084C4.04437 17.937 3.82724 17.847 3.66711 17.6868C3.50697 17.5267 3.4169 17.3096 3.41668 17.0831V5.12476C3.4169 4.89829 3.50697 4.68116 3.66711 4.52102C3.82724 4.36088 4.04437 4.27082 4.27084 4.27059H8.1573C8.25532 3.78786 8.51722 3.35387 8.89861 3.04214C9.28 2.73041 9.75743 2.56012 10.25 2.56012C10.7426 2.56012 11.22 2.73041 11.6014 3.04214C11.9828 3.35387 12.2447 3.78786 12.3427 4.27059H16.2292C16.4556 4.27082 16.6728 4.36088 16.8329 4.52102C16.9931 4.68116 17.0831 4.89829 17.0833 5.12476V17.0831Z"
+                                    fill="white" />
+                            </svg>
+                            Projects</a>
+                    </div>
+
+                    <div class="contact-info Box">
+                        <h2 id="h2-heading">Contact Info.</h2>
+                        <div class="contact-content">
+                            <p><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25"
+                                    fill="none">
+                                    <path
+                                        d="M2.36895 0.726344C3.70654 -0.0195733 5.41221 -0.194349 7.0427 0.217622C7.8368 0.417365 8.515 0.930768 8.92223 1.63767L10.3287 4.08141C10.83 4.95263 10.9748 5.98289 10.733 6.95778C10.4911 7.93267 9.88126 8.77709 9.0303 9.31531L7.79294 10.0987C7.28077 10.4217 7.09282 10.9164 7.21029 11.3081C7.63005 12.7094 8.55885 14.2636 9.58006 15.3279C9.88392 15.6462 10.4415 15.7211 10.9866 15.4044L11.671 15.0064C12.1201 14.7456 12.6169 14.5765 13.1323 14.509C13.6477 14.4415 14.1714 14.4768 14.673 14.6131C15.1745 14.7493 15.6438 14.9837 16.0534 15.3026C16.4631 15.6214 16.8049 16.0183 17.059 16.4702L18.3199 18.7095C18.7318 19.4429 18.7991 20.3184 18.5078 21.1064C17.9267 22.6716 16.8068 23.934 15.4301 24.566C14.0314 25.2074 12.3946 25.1809 10.913 24.1962C8.56668 22.6388 5.73956 20.0172 3.17871 15.6447C0.584964 11.2129 -0.0681707 7.44115 0.00544404 4.62914C0.0524322 2.82989 1.00786 1.48474 2.36895 0.726344ZM20.3012 0.815292C20.3012 0.608357 20.2187 0.409898 20.0718 0.263573C19.9249 0.117248 19.7258 0.0350441 19.5181 0.0350441C19.3104 0.0350441 19.1112 0.117248 18.9643 0.263573C18.8174 0.409898 18.7349 0.608357 18.7349 0.815292V4.71809H14.8192C14.6115 4.71809 14.4123 4.8003 14.2655 4.94662C14.1186 5.09295 14.0361 5.2914 14.0361 5.49834C14.0361 5.70527 14.1186 5.90373 14.2655 6.05006C14.4123 6.19638 14.6115 6.27859 14.8192 6.27859H18.7349V10.1798C18.7349 10.3868 18.8174 10.5852 18.9643 10.7315C19.1112 10.8779 19.3104 10.9601 19.5181 10.9601C19.7258 10.9601 19.9249 10.8779 20.0718 10.7315C20.2187 10.5852 20.3012 10.3868 20.3012 10.1798V6.27859H24.2169C24.4246 6.27859 24.6238 6.19638 24.7706 6.05006C24.9175 5.90373 25 5.70527 25 5.49834C25 5.2914 24.9175 5.09295 24.7706 4.94662C24.6238 4.8003 24.4246 4.71809 24.2169 4.71809H20.3012V0.815292Z"
+                                        fill="white" />
+                                </svg> +91 8349-020-828</p>
+                            <p><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25"
+                                    fill="none">
+                                    <path
+                                        d="M2.5 25C1.8125 25 1.22375 24.6937 0.733752 24.0812C0.243752 23.4687 -0.000831211 22.7333 2.12224e-06 21.875V3.125C2.12224e-06 2.26563 0.245002 1.52969 0.735002 0.91719C1.225 0.30469 1.81334 -0.00103901 2.5 2.6528e-06H22.5C23.1875 2.6528e-06 23.7762 0.306252 24.2662 0.918752C24.7562 1.53125 25.0008 2.26667 25 3.125V21.875C25 22.7344 24.755 23.4703 24.265 24.0828C23.775 24.6953 23.1867 25.001 22.5 25H2.5ZM12.5 14.0625L22.5 6.25V3.125L12.5 10.9375L2.5 3.125V6.25L12.5 14.0625Z"
+                                        fill="white" />
+                                </svg>rajyadav7047@gmail.com</p>
+                            <p><svg xmlns="http://www.w3.org/2000/svg" width="22" height="30" viewBox="0 0 22 30"
+                                    fill="none">
+                                    <path
+                                        d="M11 14.25C9.95808 14.25 8.95883 13.8549 8.22208 13.1517C7.48533 12.4484 7.07143 11.4946 7.07143 10.5C7.07143 9.50544 7.48533 8.55161 8.22208 7.84835C8.95883 7.14509 9.95808 6.75 11 6.75C12.0419 6.75 13.0412 7.14509 13.7779 7.84835C14.5147 8.55161 14.9286 9.50544 14.9286 10.5C14.9286 10.9925 14.827 11.4801 14.6295 11.9351C14.4321 12.39 14.1427 12.8034 13.7779 13.1517C13.4131 13.4999 12.98 13.7761 12.5034 13.9645C12.0268 14.153 11.5159 14.25 11 14.25ZM11 0C8.08262 0 5.28473 1.10625 3.22183 3.07538C1.15893 5.04451 0 7.71523 0 10.5C0 18.375 11 30 11 30C11 30 22 18.375 22 10.5C22 7.71523 20.8411 5.04451 18.7782 3.07538C16.7153 1.10625 13.9174 0 11 0Z"
+                                        fill="white" />
+                                </svg>Indore (M.P)- 452010, India</p>
+                        </div>
+
+                        <div class="contact-social-info">
+                            <a href="https://www.linkedin.com/in/rajyadav-2920r0218j8/" target="_blank"><img
+                                    src="/3D ICON/LinkedIn.png" loading="lazy" alt="LinkedIn"></a>
+                            <a href="https://github.com/Rajyadav2912" target="_blank"><img src="/3D ICON/github.png"
+                                    loading="lazy" alt="github"></a>
+                            <a href="https://www.facebook.com/profile.php?id=100011851505857" target="_blank"><img
+                                    src="/3D ICON/Facebook.png" loading="lazy" alt="facebook"></a>
+                            <a href="https://www.instagram.com/yadav_raj.29" target="_blank"><img
+                                    src="/3D ICON/Instagram.png" loading="lazy" alt="instagram"></a>
+                        </div>
+                    </div>
+                </div>
+                <div id="line">
+                    <p id="footer">Designed with 😎 by Raj Yadav</p>
+                </div>
+            </div>
+        </section>
+        <!-- Ending Section End  -->
+    </section>
+
+    <script src="index.js"></script>
+
+    <!-- <script src="/script.js"></script> -->
+
+    <!-- Include Email.js library -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+        emailjs.init('YOeeliDWO8RXStjkb')
+    </script>
+</body>
+
+</html>
